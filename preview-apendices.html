@@ -1,0 +1,114 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#ddd}
+  .slide{width:1280px;height:720px;background:#F5F0E7;margin:14px auto;padding:44px 48px;font-family:Arial,Helvetica,sans-serif;color:#3B2A1A;box-sizing:border-box;position:relative;overflow:hidden}
+  .eyebrow{color:#9C6B43;font-weight:bold;font-size:13px;letter-spacing:3px;margin:0 0 4px}
+  .title{font-size:31px;font-weight:bold;margin:0 0 20px}
+  table{border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+  .hbar td{background:#3B2A1A;color:#F5F0E7;font-weight:bold;height:40px;font-size:14px}
+  .hbar td:first-child{border-top-left-radius:7px;border-bottom-left-radius:7px;text-align:left;padding-left:12px}
+  .hbar td:last-child{border-top-right-radius:7px;border-bottom-right-radius:7px}
+  tbody td{height:34px;text-align:center;border-bottom:1px solid #C7BAA6;vertical-align:middle;padding:2px 8px}
+  tbody td:first-child{text-align:left;font-weight:bold;padding-left:12px}
+  .ac{color:#9C6B43;font-weight:bold}
+  .up td:first-child{text-transform:uppercase}
+  .note{font-size:12.5px;margin-top:12px;line-height:1.35}
+  .noteac{color:#9C6B43;font-weight:bold}
+  .foot{position:absolute;bottom:16px;left:48px;right:48px;display:flex;justify-content:space-between;font-size:11px;color:#9C6B43}
+  .cols{display:flex;gap:28px;align-items:flex-start}
+</style></head><body>
+
+<div class="slide">
+  <p class="eyebrow">APÊNDICE · B1</p><p class="title">MATRIZ DE DECISÃO + DESEMPATE</p>
+  <table class="up" style="width:100%">
+  <colgroup><col style="width:25%"><col style="width:9%"><col span="5" style="width:13.2%"></colgroup>
+  <thead><tr class="hbar"><td>Critério</td><td>Peso</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr></thead>
+  <tbody>
+  <tr><td>Integração eletrônica</td><td class="ac">0,20</td><td>4</td><td>3</td><td>2</td><td>4</td><td>3</td></tr>
+  <tr><td>Integração GNSS</td><td class="ac">0,15</td><td>5</td><td>2</td><td>2</td><td>5</td><td>4</td></tr>
+  <tr><td>Integração energética</td><td class="ac">0,15</td><td>3</td><td>5</td><td>2</td><td>3</td><td>3</td></tr>
+  <tr><td>Volume no invólucro</td><td class="ac">0,15</td><td>4</td><td>3</td><td>2</td><td>4</td><td>3</td></tr>
+  <tr><td>Facilidade de montagem</td><td class="ac">0,10</td><td>3</td><td>3</td><td>2</td><td>4</td><td>2</td></tr>
+  <tr><td>Robustez mecânica</td><td class="ac">0,10</td><td>3</td><td>3</td><td>2</td><td>3</td><td>4</td></tr>
+  <tr><td>Adequação ao cabresto</td><td class="ac">0,10</td><td>4</td><td>3</td><td>2</td><td>4</td><td>3</td></tr>
+  <tr><td>Custo e disponibilidade</td><td class="ac">0,05</td><td>5</td><td>3</td><td>4</td><td>4</td><td>3</td></tr>
+  <tr><td>Resultado ponderado</td><td class="ac">—</td><td class="ac">3,85</td><td class="ac">3,15</td><td class="ac">2,10</td><td class="ac">3,90</td><td class="ac">3,15</td></tr>
+  </tbody></table>
+  <p class="note noteac">A = SELECIONADO · D = maior pontuação bruta — Δ 0,05 em escala de 5, dentro da margem subjetiva; desempate por fatores de projeto (§5.2.5).</p>
+  <p class="note">Desempate — por que A sobre D: i. receptor UC6580 multiconstelação L1/L5 (T-Beam restrito a L1) · ii. formato estreito, sem conector UHF frontal — compatível com o invólucro de 34 mm · iii. disponibilidade comercial nacional no prazo e custo do cronograma.</p>
+  <div class="foot"><span>UFES · Engenharia de Produção · CT</span><span>Apêndice · B1</span></div>
+</div>
+
+<div class="slide">
+  <p class="eyebrow">APÊNDICE · B2</p><p class="title">BALANÇO ENERGÉTICO</p>
+  <table style="width:100%">
+  <colgroup><col style="width:14%"><col style="width:14%"><col style="width:18%"><col style="width:19%"><col style="width:19%"><col style="width:16%"></colgroup>
+  <thead><tr class="hbar"><td>Intervalo</td><td>Ciclos/dia</td><td>Consumo (mAh/dia)</td><td>Saldo η = 0,60 (mAh)</td><td>Saldo η = 0,30 (mAh)</td><td>Autonomia sem solar</td></tr></thead>
+  <tbody>
+  <tr style="height:42px"><td>5 min</td><td>288</td><td>117,4</td><td>+4,2</td><td>−56,6</td><td>8,5 dias</td></tr>
+  <tr style="height:42px"><td>10 min</td><td>144</td><td>59,0</td><td>+62,6</td><td>+1,8</td><td>16,9 dias</td></tr>
+  <tr style="height:42px"><td class="ac">15 min</td><td class="ac">96</td><td class="ac">39,6</td><td class="ac">+82,0</td><td class="ac">+21,2</td><td class="ac">25,3 dias</td></tr>
+  <tr style="height:42px"><td>30 min</td><td>48</td><td>20,1</td><td>+101,5</td><td>+40,7</td><td>49,7 dias</td></tr>
+  </tbody></table>
+  <p class="note">Geração solar líquida (5 h efetivas de sol): 121,6 mAh/dia (η = 0,60) · 60,8 mAh/dia (η = 0,30) — painel 0,15 Wp (5 V / 30 mA), bateria LiPo 1.000 mAh.</p>
+  <p class="note">15 min = referência operacional: margem de ~35% da geração diária no cenário conservador. Hibernação com GNSS e LoRa desenergizados (Vext) e display desligado entre ciclos.</p>
+  <p class="note noteac">Validação em campo: operação contínua no período, 0 interrupções por depleção de bateria (§6.4).</p>
+  <div class="foot"><span>UFES · Engenharia de Produção · CT</span><span>Apêndice · B2</span></div>
+</div>
+
+<div class="slide">
+  <p class="eyebrow">APÊNDICE · B3</p><p class="title">RSSI, FAIXAS E PDR</p>
+  <div class="cols">
+    <table style="width:46%">
+    <colgroup><col style="width:34%"><col style="width:66%"></colgroup>
+    <thead><tr class="hbar"><td>Faixa de RSSI (dBm)</td><td>Qualidade do enlace</td></tr></thead>
+    <tbody>
+    <tr style="height:44px"><td>Acima de −80</td><td>Excelente — curta distância / linha de visada</td></tr>
+    <tr style="height:44px"><td>−80 a −100</td><td>Bom a moderado — plenamente funcional</td></tr>
+    <tr style="height:44px"><td>−100 a −110</td><td>Fraco, porém operante</td></tr>
+    <tr style="height:44px"><td>−115 a −120</td><td>Limiar de sensibilidade — recepção intermitente</td></tr>
+    </tbody></table>
+    <table style="width:50%">
+    <colgroup><col style="width:32%"><col style="width:68%"></colgroup>
+    <thead><tr class="hbar"><td>Parâmetro</td><td>Valor em campo</td></tr></thead>
+    <tbody>
+    <tr style="height:35px"><td>Payload</td><td>30 bytes (binário)</td></tr>
+    <tr style="height:35px"><td>Modulação</td><td>SF7 · CR 4/5 · BW 125 kHz</td></tr>
+    <tr style="height:35px"><td>Frequência</td><td>915 MHz — ISM 902–928 (ANATEL)</td></tr>
+    <tr style="height:35px"><td>Potência TX</td><td>~14 dBm · time-on-air ~60 ms</td></tr>
+    <tr style="height:35px"><td>RSSI medido</td><td>−116 a −46 dBm (limites da área)</td></tr>
+    </tbody></table>
+  </div>
+  <p class="note">PDR: recepção e persistência integrais dos uplinks registrados; o ensaio controlado — distância medida e razão transmitidos/recebidos — permanece como desdobramento (§6.2).</p>
+  <p class="note noteac">Contraste com a literatura: dos Reis et al. (2021) reportam perda de 40–60% com encaminhamento direto por gateway de canal único; aqui, servidor LoRaWAN gerenciado (TTN) com de-duplicação (§6.7).</p>
+  <div class="foot"><span>UFES · Engenharia de Produção · CT</span><span>Apêndice · B3</span></div>
+</div>
+
+<div class="slide">
+  <p class="eyebrow">APÊNDICE · B4</p><p class="title">MODELO DE DADOS E PIPELINE</p>
+  <div class="cols">
+    <table style="width:47%">
+    <colgroup><col style="width:42%"><col style="width:58%"></colgroup>
+    <thead><tr class="hbar"><td>Domínio</td><td>Conteúdo</td></tr></thead>
+    <tbody>
+    <tr style="height:44px"><td>01 · Proprietários e imóveis</td><td>Cadastro fundiário — vínculo permanente</td></tr>
+    <tr style="height:44px"><td>02 · Rebanho e eventos</td><td>Eventos zootécnicos ao longo da vida</td></tr>
+    <tr style="height:44px"><td>03 · Telemetria</td><td>Posições brutas — rastreáveis até o dispositivo</td></tr>
+    </tbody></table>
+    <table style="width:49%">
+    <colgroup><col style="width:37%"><col style="width:63%"></colgroup>
+    <thead><tr class="hbar"><td>Cadeia de ingestão</td><td>Função</td></tr></thead>
+    <tbody>
+    <tr style="height:32px"><td>Node</td><td>Aquisição GNSS + uplink LoRa (30 bytes)</td></tr>
+    <tr style="height:32px"><td>Gateway</td><td>Recepção 915 MHz → encaminhamento IP</td></tr>
+    <tr style="height:32px"><td>The Things Network</td><td>De-duplicação + metadados (RSSI, SNR)</td></tr>
+    <tr style="height:32px"><td>Webhook</td><td>HTTP POST (JSON) à plataforma</td></tr>
+    <tr style="height:32px"><td>Edge Function</td><td>Validação e persistência do registro</td></tr>
+    <tr style="height:32px"><td>PostgreSQL · PostGIS</td><td>SQL geoespacial · RLS por propriedade</td></tr>
+    </tbody></table>
+  </div>
+  <p class="note">Vínculo dispositivo–animal é temporal — resolvido pelo histórico de eventos, preservando a integridade da telemetria (§6.5). Mapa consulta por RPC de última posição.</p>
+  <p class="note noteac">Stack: Next.js / React · Vercel · Supabase (PostgreSQL + PostGIS, sa-east-1) · Mapbox GL JS · Auth + RLS.</p>
+  <div class="foot"><span>UFES · Engenharia de Produção · CT</span><span>Apêndice · B4</span></div>
+</div>
+</body></html>
